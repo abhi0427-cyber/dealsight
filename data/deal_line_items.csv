@@ -1,0 +1,143 @@
+line_id,deal_id,sku,product,quantity,list_unit_price_usd,discount_pct,net_unit_price_usd,term_months,billing_type,line_total_usd
+LI-00001,DD-1001,IRU-VLN,Vulnerability Management,400,96.0,25,72.0,12,subscription,28800.0
+LI-00002,DD-1001,IRU-EPM,Endpoint Management,200,120.0,0,120.0,12,subscription,24000.0
+LI-00003,DD-1002,IRU-IAM,Identity & Access,100,144.0,0,144.0,24,subscription,28800.0
+LI-00004,DD-1002,IRU-EDR,Endpoint Security,200,156.0,25,117.0,24,subscription,46800.0
+LI-00005,DD-1003,IRU-EPM,Endpoint Management,300,120.0,38,74.4,12,subscription,22320.0
+LI-00006,DD-1003,IRU-IAM,Identity & Access,300,144.0,30,100.8,12,subscription,30240.0
+LI-00007,DD-1004,IRU-EPM,Endpoint Management,400,120.0,20,96.0,12,subscription,38400.0
+LI-00008,DD-1005,IRU-SUP,Premium Support,75,40.0,0,40.0,12,subscription,3000.0
+LI-00009,DD-1005,IRU-EDR,Endpoint Security,500,156.0,20,124.8,12,subscription,62400.0
+LI-00010,DD-1005,IRU-IAM,Identity & Access,200,144.0,20,115.2,12,subscription,23040.0
+LI-00011,DD-1006,IRU-EPM,Endpoint Management,120,120.0,25,90.0,24,subscription,21600.0
+LI-00012,DD-1006,IRU-EDR,Endpoint Security,100,156.0,20,124.8,24,subscription,24960.0
+LI-00013,DD-1006,IRU-SUP,Premium Support,750,40.0,0,40.0,24,subscription,60000.0
+LI-00016,DD-1007,IRU-EDR,Endpoint Security,250,156.0,0,156.0,36,subscription,117000.0
+LI-00017,DD-1007,IRU-VLN,Vulnerability Management,300,96.0,0,96.0,36,subscription,86400.0
+LI-00018,DD-1008,IRU-SUP,Premium Support,50,40.0,25,30.0,24,subscription,3000.0
+LI-00019,DD-1008,IRU-CMP,Compliance Automation,75,190.0,10,171.0,24,subscription,25650.0
+LI-00020,DD-1009,IRU-CMP,Compliance Automation,75,190.0,20,152.0,12,subscription,11400.0
+LI-00021,DD-1009,IRU-EDR,Endpoint Security,1000,156.0,0,156.0,12,subscription,156000.0
+LI-00022,DD-1009,IRU-VLN,Vulnerability Management,100,96.0,0,96.0,12,subscription,9600.0
+LI-00023,DD-1010,IRU-SUP,Premium Support,25,40.0,25,30.0,24,subscription,1500.0
+LI-00024,DD-1010,IRU-VLN,Vulnerability Management,500,96.0,20,76.8,24,subscription,76800.0
+LI-00025,DD-1010,IRU-EPM,Endpoint Management,40,120.0,20,96.0,24,subscription,7680.0
+LI-00026,DD-1011,IRU-EDR,Endpoint Security,400,156.0,25,117.0,12,subscription,46800.0
+LI-00027,DD-1012,IRU-EPM,Endpoint Management,750,120.0,15,102.0,12,subscription,76500.0
+LI-00028,DD-1012,IRU-IAM,Identity & Access,750,144.0,5,136.8,12,subscription,102600.0
+LI-00029,DD-1012,IRU-EDR,Endpoint Security,100,156.0,15,132.6,12,subscription,13260.0
+LI-00030,DD-1013,IRU-EDR,Endpoint Security,25,156.0,15,132.6,12,subscription,3315.0
+LI-00031,DD-1013,IRU-CMP,Compliance Automation,120,190.0,15,161.5,12,subscription,19380.0
+LI-00032,DD-1014,IRU-EPM,Endpoint Management,120,120.0,10,108.0,24,subscription,25920.0
+LI-00033,DD-1014,IRU-VLN,Vulnerability Management,750,96.0,20,76.8,24,subscription,115200.0
+LI-00034,DD-1015,IRU-CMP,Compliance Automation,400,190.0,25,142.5,12,subscription,57000.0
+LI-00035,DD-1015,IRU-IAM,Identity & Access,200,144.0,20,115.2,12,subscription,23040.0
+LI-00036,DD-1015,IRU-EDR,Endpoint Security,250,156.0,0,156.0,12,subscription,39000.0
+LI-00037,DD-1016,IRU-SUP,Premium Support,25,40.0,20,32.0,12,subscription,800.0
+LI-00038,DD-1016,IRU-IAM,Identity & Access,250,144.0,0,144.0,12,subscription,36000.0
+LI-00039,DD-1016,IRU-CMP,Compliance Automation,150,190.0,10,171.0,12,subscription,25650.0
+LI-00040,DD-1017,IRU-SUP,Premium Support,75,40.0,35,26.0,24,subscription,3900.0
+LI-00041,DD-1017,IRU-EPM,Endpoint Management,120,120.0,38,74.4,24,subscription,17856.0
+LI-00042,DD-1017,IRU-EDR,Endpoint Security,300,156.0,32,106.08,24,subscription,63648.0
+LI-00043,DD-1018,IRU-EPM,Endpoint Management,100,120.0,0,120.0,12,subscription,12000.0
+LI-00044,DD-1018,IRU-SUP,Premium Support,150,40.0,10,36.0,12,subscription,5400.0
+LI-00045,DD-1018,IRU-CMP,Compliance Automation,500,190.0,20,152.0,12,subscription,76000.0
+LI-00046,DD-1019,IRU-VLN,Vulnerability Management,25,96.0,20,76.8,12,subscription,1920.0
+LI-00047,DD-1019,IRU-SUP,Premium Support,1000,40.0,20,32.0,12,subscription,32000.0
+LI-00050,DD-1020,IRU-SUP,Premium Support,40,40.0,15,34.0,36,subscription,4080.0
+LI-00051,DD-1020,IRU-EPM,Endpoint Management,1000,120.0,20,96.0,36,subscription,288000.0
+LI-00052,DD-1020,IRU-CMP,Compliance Automation,25,190.0,15,161.5,36,subscription,12112.5
+LI-00053,DD-1021,IRU-EPM,Endpoint Management,500,120.0,0,120.0,12,subscription,60000.0
+LI-00054,DD-1021,IRU-VLN,Vulnerability Management,25,96.0,20,76.8,12,subscription,1920.0
+LI-00055,DD-1022,IRU-CMP,Compliance Automation,500,190.0,15,161.5,12,subscription,80750.0
+LI-00056,DD-1022,IRU-SUP,Premium Support,50,40.0,10,36.0,12,subscription,1800.0
+LI-00057,DD-1022,IRU-IAM,Identity & Access,120,144.0,10,129.6,12,subscription,15552.0
+LI-00058,DD-1023,IRU-CMP,Compliance Automation,40,190.0,0,190.0,12,subscription,7600.0
+LI-00059,DD-1024,IRU-IAM,Identity & Access,40,144.0,0,144.0,12,subscription,5760.0
+LI-00060,DD-1024,IRU-SUP,Premium Support,500,40.0,25,30.0,12,subscription,15000.0
+LI-00061,DD-1025,IRU-EPM,Endpoint Management,100,120.0,20,96.0,18,subscription,14400.0
+LI-00062,DD-1025,IRU-EDR,Endpoint Security,500,156.0,20,124.8,18,subscription,93600.0
+LI-00063,DD-1026,IRU-VLN,Vulnerability Management,25,96.0,40,57.6,24,subscription,2880.0
+LI-00064,DD-1026,IRU-IAM,Identity & Access,750,144.0,30,100.8,24,subscription,151200.0
+LI-00065,DD-1027,IRU-VLN,Vulnerability Management,50,96.0,0,96.0,12,subscription,4800.0
+LI-00066,DD-1027,IRU-IAM,Identity & Access,75,144.0,20,115.2,12,subscription,8640.0
+LI-00067,DD-1028,IRU-CMP,Compliance Automation,120,190.0,10,171.0,12,subscription,20520.0
+LI-00068,DD-1029,IRU-CMP,Compliance Automation,400,190.0,10,171.0,12,subscription,68400.0
+LI-00069,DD-1030,IRU-IAM,Identity & Access,120,144.0,25,108.0,12,subscription,12960.0
+LI-00070,DD-1031,IRU-EPM,Endpoint Management,40,120.0,25,90.0,12,subscription,3600.0
+LI-00071,DD-1031,IRU-SUP,Premium Support,150,40.0,0,40.0,12,subscription,6000.0
+LI-00072,DD-1032,IRU-EPM,Endpoint Management,300,120.0,10,108.0,12,subscription,32400.0
+LI-00073,DD-1033,IRU-CMP,Compliance Automation,400,190.0,15,161.5,12,subscription,64600.0
+LI-00074,DD-1033,IRU-IAM,Identity & Access,750,144.0,5,136.8,12,subscription,102600.0
+LI-00075,DD-1034,IRU-EDR,Endpoint Security,500,156.0,35,101.4,24,subscription,101400.0
+LI-00076,DD-1034,IRU-SUP,Premium Support,250,40.0,40,24.0,24,subscription,12000.0
+LI-00077,DD-1034,IRU-EPM,Endpoint Management,120,120.0,38,74.4,24,subscription,17856.0
+LI-00078,DD-1035,IRU-EDR,Endpoint Security,25,156.0,5,148.2,12,subscription,3705.0
+LI-00079,DD-1035,IRU-EPM,Endpoint Management,500,120.0,15,102.0,12,subscription,51000.0
+LI-00080,DD-1036,IRU-EPM,Endpoint Management,200,120.0,15,102.0,12,subscription,20400.0
+LI-00083,DD-1037,IRU-SUP,Premium Support,250,40.0,10,36.0,36,subscription,27000.0
+LI-00084,DD-1038,IRU-EPM,Endpoint Management,1000,120.0,0,120.0,12,subscription,120000.0
+LI-00085,DD-1038,IRU-VLN,Vulnerability Management,25,96.0,10,86.4,12,subscription,2160.0
+LI-00086,DD-1039,IRU-VLN,Vulnerability Management,500,96.0,15,81.6,12,subscription,40800.0
+LI-00087,DD-1039,IRU-EPM,Endpoint Management,200,120.0,20,96.0,12,subscription,19200.0
+LI-00090,DD-1041,IRU-CMP,Compliance Automation,75,190.0,38,117.8,24,subscription,17670.0
+LI-00091,DD-1041,IRU-IAM,Identity & Access,75,144.0,32,97.92,24,subscription,14688.0
+LI-00092,DD-1041,IRU-VLN,Vulnerability Management,400,96.0,30,67.2,24,subscription,53760.0
+LI-00093,DD-1041,IRU-EPM,Endpoint Management,25,120.0,35,78.0,24,subscription,3900.0
+LI-00094,DD-1042,IRU-CMP,Compliance Automation,250,190.0,5,180.5,36,subscription,135375.0
+LI-00095,DD-1042,IRU-EDR,Endpoint Security,50,156.0,10,140.4,36,subscription,21060.0
+LI-00096,DD-1043,IRU-CMP,Compliance Automation,300,190.0,15,161.5,36,subscription,145350.0
+LI-00097,DD-1043,IRU-SUP,Premium Support,1000,40.0,20,32.0,36,subscription,96000.0
+LI-00098,DD-1044,IRU-IAM,Identity & Access,50,144.0,10,129.6,12,subscription,6480.0
+LI-00099,DD-1044,IRU-SUP,Premium Support,40,40.0,15,34.0,12,subscription,1360.0
+LI-00100,DD-1044,IRU-EPM,Endpoint Management,200,120.0,5,114.0,12,subscription,22800.0
+LI-00101,DD-1045,IRU-CMP,Compliance Automation,500,190.0,15,161.5,36,subscription,242250.0
+LI-00102,DD-1046,IRU-IAM,Identity & Access,25,144.0,5,136.8,12,subscription,3420.0
+LI-00103,DD-1046,IRU-EDR,Endpoint Security,40,156.0,10,140.4,12,subscription,5616.0
+LI-00104,DD-1047,IRU-VLN,Vulnerability Management,400,96.0,10,86.4,36,subscription,103680.0
+LI-00105,DD-1048,IRU-EPM,Endpoint Management,120,120.0,15,102.0,24,subscription,24480.0
+LI-00106,DD-1048,IRU-VLN,Vulnerability Management,500,96.0,5,91.2,24,subscription,91200.0
+LI-00107,DD-1048,IRU-EDR,Endpoint Security,400,156.0,10,140.4,24,subscription,112320.0
+LI-00108,DD-1048,IRU-CMP,Compliance Automation,40,190.0,15,161.5,24,subscription,12920.0
+LI-00109,DD-1049,IRU-EDR,Endpoint Security,200,156.0,0,156.0,12,subscription,31200.0
+LI-00110,DD-1049,IRU-EPM,Endpoint Management,400,120.0,10,108.0,12,subscription,43200.0
+LI-00111,DD-1050,IRU-VLN,Vulnerability Management,100,96.0,15,81.6,24,subscription,16320.0
+LI-00112,DD-1050,IRU-IAM,Identity & Access,300,144.0,0,144.0,24,subscription,86400.0
+LI-00113,DD-1051,IRU-IAM,Identity & Access,75,144.0,25,108.0,24,subscription,16200.0
+LI-00114,DD-1051,IRU-CMP,Compliance Automation,500,190.0,0,190.0,24,subscription,190000.0
+LI-00115,DD-1051,IRU-EPM,Endpoint Management,150,120.0,20,96.0,24,subscription,28800.0
+LI-00116,DD-1051,IRU-EDR,Endpoint Security,500,156.0,10,140.4,24,subscription,140400.0
+LI-00117,DD-1052,IRU-EPM,Endpoint Management,100,120.0,0,120.0,12,subscription,12000.0
+LI-00118,DD-1052,IRU-EDR,Endpoint Security,75,156.0,20,124.8,12,subscription,9360.0
+LI-00119,DD-1052,IRU-CMP,Compliance Automation,1000,190.0,5,180.5,12,subscription,180500.0
+LI-00120,DD-1052,IRU-SUP,Premium Support,400,40.0,10,36.0,12,subscription,14400.0
+LI-00121,DD-1053,IRU-EPM,Endpoint Management,500,120.0,20,96.0,12,subscription,48000.0
+LI-00124,DD-1054,IRU-CMP,Compliance Automation,25,190.0,20,152.0,36,subscription,11400.0
+LI-00125,DD-1054,IRU-EDR,Endpoint Security,50,156.0,10,140.4,36,subscription,21060.0
+LI-00126,DD-1054,IRU-SUP,Premium Support,500,40.0,20,32.0,36,subscription,48000.0
+LI-00127,DD-1055,IRU-EPM,Endpoint Management,300,120.0,30,84.0,18,subscription,37800.0
+LI-00128,DD-1055,IRU-VLN,Vulnerability Management,50,96.0,35,62.4,18,subscription,4680.0
+LI-00129,DD-1056,IRU-SUP,Premium Support,300,40.0,10,36.0,12,subscription,10800.0
+LI-00130,DD-1056,IRU-CMP,Compliance Automation,40,190.0,20,152.0,12,subscription,6080.0
+LI-00131,DD-1056,IRU-VLN,Vulnerability Management,200,96.0,15,81.6,12,subscription,16320.0
+LI-00132,DD-1056,IRU-EPM,Endpoint Management,75,120.0,20,96.0,12,subscription,7200.0
+LI-00133,DD-1057,IRU-SUP,Premium Support,120,40.0,0,40.0,12,subscription,4800.0
+LI-00134,DD-1057,IRU-VLN,Vulnerability Management,400,96.0,0,96.0,12,subscription,38400.0
+LI-00135,DD-1058,IRU-SUP,Premium Support,200,40.0,20,32.0,24,subscription,12800.0
+LI-00136,DD-1059,IRU-IAM,Identity & Access,25,144.0,25,108.0,12,subscription,2700.0
+LI-00137,DD-1059,IRU-CMP,Compliance Automation,250,190.0,20,152.0,12,subscription,38000.0
+LI-00138,DD-1059,IRU-VLN,Vulnerability Management,75,96.0,20,76.8,12,subscription,5760.0
+LI-00139,DD-1059,IRU-EDR,Endpoint Security,500,156.0,5,148.2,12,subscription,74100.0
+LI-00142,DD-1060,IRU-VLN,Vulnerability Management,50,96.0,0,96.0,36,subscription,14400.0
+LI-00143,DD-1060,IRU-EPM,Endpoint Management,75,120.0,20,96.0,36,subscription,21600.0
+LI-00144,DD-1061,IRU-VLN,Vulnerability Management,400,96.0,15,81.6,36,subscription,97920.0
+LI-00145,DD-1061,IRU-EPM,Endpoint Management,200,120.0,20,96.0,36,subscription,57600.0
+LI-00146,DD-1062,IRU-SUP,Premium Support,400,40.0,20,32.0,12,subscription,12800.0
+LI-00147,DD-1062,IRU-CMP,Compliance Automation,200,190.0,15,161.5,12,subscription,32300.0
+LI-00148,DD-1063,IRU-EDR,Endpoint Security,400,156.0,15,132.6,12,subscription,53040.0
+LI-00149,DD-1064,IRU-SUP,Premium Support,40,40.0,20,32.0,24,subscription,2560.0
+LI-00150,DD-1064,IRU-EDR,Endpoint Security,250,156.0,15,132.6,24,subscription,66300.0
+LI-00151,DD-1099,IRU-CMP,Compliance Automation,40,190.0,0,190.0,12,subscription,7600.0
+LI-00152,DD-1003,IRU-SUP,Premium Support,80,40.0,0,40.0,12,subscription,3200.0
+LI-00153,DD-1026,IRU-SUP,Premium Support,60,40.0,0,40.0,24,subscription,4800.0
+LI-00154,DD-1055,IRU-SUP,Premium Support,60,40.0,0,40.0,18,subscription,3600.0

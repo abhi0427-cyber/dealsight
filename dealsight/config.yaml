@@ -1,0 +1,88 @@
+# DealSight configuration
+# Severities and thresholds — edit here, not in code.
+
+rules:
+  cv_vs_lines:
+    severity: block
+    tolerance_usd: 1.00
+
+  line_math:
+    severity: block
+    tolerance_usd: 0.01
+
+  line_term:
+    severity: block
+
+  weighted_discount:
+    severity: block
+    max_discount_pct: 25.0
+
+  max_line_discount:
+    severity: block
+    max_discount_pct: 25.0
+
+  po_required:
+    severity: block
+
+  billing_contact:
+    severity: block
+
+  email_regex:
+    severity: block
+
+  duplicate_deal:
+    severity: block
+    close_date_window_days: 7
+
+  fuzzy_customer:
+    severity: warn
+    similarity_threshold: 0.85
+
+  empty_deal:
+    severity: block
+
+  currency_mismatch:
+    severity: block
+
+  date_sanity:
+    severity: warn
+
+  billing_stripe:
+    severity: warn
+
+  special_terms:
+    severity: block
+
+# Triage bucket priority (highest to lowest)
+bucket_priority:
+  - do_not_auto_invoice
+  - needs_approval
+  - needs_rep
+  - ready
+
+# Rule-to-bucket mapping
+bucket_map:
+  cv_vs_lines: do_not_auto_invoice
+  line_math: do_not_auto_invoice
+  line_term: do_not_auto_invoice
+  weighted_discount: needs_approval
+  max_line_discount: needs_approval
+  po_required: needs_rep
+  billing_contact: needs_rep
+  email_regex: needs_rep
+  duplicate_deal: do_not_auto_invoice
+  fuzzy_customer: do_not_auto_invoice
+  empty_deal: do_not_auto_invoice
+  currency_mismatch: do_not_auto_invoice
+  date_sanity: needs_rep
+  billing_stripe: needs_rep
+  special_terms: do_not_auto_invoice
+
+# Parser settings
+parser:
+  llm_model: claude-sonnet-4-6
+  llm_temperature: 0
+
+# Watch mode
+watch:
+  poll_interval_seconds: 5

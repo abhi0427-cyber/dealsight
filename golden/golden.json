@@ -1,0 +1,176 @@
+[
+  {
+    "id": "G-001",
+    "origin": "real",
+    "text": "Co-terminate with SUB-00142 ending 2025-09-15, prorate remaining months",
+    "expected": {"type": "coterm", "sub_id": "SUB-00142", "coterm_end": "2025-09-15", "prorate": true}
+  },
+  {
+    "id": "G-002",
+    "origin": "real",
+    "text": "Co-terminate with SUB-00287 ending 2025-12-31",
+    "expected": {"type": "coterm", "sub_id": "SUB-00287", "coterm_end": "2025-12-31", "prorate": false}
+  },
+  {
+    "id": "G-003",
+    "origin": "real",
+    "text": "Co-terminate with SUB-00391 ending 2026-03-15, prorate",
+    "expected": {"type": "coterm", "sub_id": "SUB-00391", "coterm_end": "2026-03-15", "prorate": true}
+  },
+  {
+    "id": "G-004",
+    "origin": "real",
+    "text": "Ramp: Year 1 $24,000 Year 2 $36,000 Year 3 $48,000",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 24000}, {"year": 2, "amount": 36000}, {"year": 3, "amount": 48000}]}
+  },
+  {
+    "id": "G-005",
+    "origin": "real",
+    "text": "Ramp: Year 1 $18,000, Year 2 $24,000",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 18000}, {"year": 2, "amount": 24000}]}
+  },
+  {
+    "id": "G-006",
+    "origin": "real",
+    "text": "Co-terminate with SUB-00445 ending 2025-06-30",
+    "expected": {"type": "coterm", "sub_id": "SUB-00445", "coterm_end": "2025-06-30", "prorate": false}
+  },
+  {
+    "id": "G-007",
+    "origin": "real",
+    "text": "Ramp: Year 1 $30,000 Year 2 $35,000 Year 3 $40,000",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 30000}, {"year": 2, "amount": 35000}, {"year": 3, "amount": 40000}]}
+  },
+  {
+    "id": "G-008",
+    "origin": "real",
+    "text": "Standard terms apply. Net 30 payment.",
+    "expected": {"type": "none"}
+  },
+  {
+    "id": "G-009",
+    "origin": "real",
+    "text": "Customer prefers quarterly invoicing",
+    "expected": {"type": "none"}
+  },
+  {
+    "id": "G-010",
+    "origin": "synthetic",
+    "text": "Bill only through the current period, which ends the sixth of October 2026. Account 25599 — charge proportionally for the partial period.",
+    "expected": {"type": "coterm", "sub_id": "25599", "coterm_end": "2026-10-06", "prorate": true}
+  },
+  {
+    "id": "G-011",
+    "origin": "synthetic",
+    "text": "Align this with subscription 30821 rather than opening a new one. Their renewal is Oct 15, 2026. Just bill the difference for the remaining days.",
+    "expected": {"type": "coterm", "sub_id": "30821", "coterm_end": "2026-10-15", "prorate": true}
+  },
+  {
+    "id": "G-012",
+    "origin": "synthetic",
+    "text": "Extend what they already have on agreement 44210 — do not start a fresh term. Adjust for the partial period through their renewal on 22 Dec 2026.",
+    "expected": {"type": "coterm", "sub_id": "44210", "coterm_end": "2026-12-22", "prorate": true}
+  },
+  {
+    "id": "G-013",
+    "origin": "synthetic",
+    "text": "This add-on should ride on the same billing cycle as their current contract (ref 10552). Have it expire when that one does, on the fifteenth of March 2027. Don't bill a full cycle — just the portion remaining.",
+    "expected": {"type": "coterm", "sub_id": "10552", "coterm_end": "2027-03-15", "prorate": true}
+  },
+  {
+    "id": "G-014",
+    "origin": "synthetic",
+    "text": "Do not create a separate billing entity. Fold this into active subscription no. 88321, ending the first of June 2027. Charge for the fractional period only.",
+    "expected": {"type": "coterm", "sub_id": "88321", "coterm_end": "2027-06-01", "prorate": true}
+  },
+  {
+    "id": "G-015",
+    "origin": "synthetic",
+    "text": "Merge this with what's already on file under contract 70044. We need it wrapped up by 9/30/2026. Full-period billing applies, no partial credit.",
+    "expected": {"type": "coterm", "sub_id": "70044", "coterm_end": "2026-09-30", "prorate": false}
+  },
+  {
+    "id": "G-016",
+    "origin": "synthetic",
+    "text": "Sync to the same expiry as agreement 33190. That agreement wraps up the third of November 2026. Charge proportionally for the partial period.",
+    "expected": {"type": "coterm", "sub_id": "33190", "coterm_end": "2026-11-03", "prorate": true}
+  },
+  {
+    "id": "G-017",
+    "origin": "synthetic",
+    "text": "The second twelve months are billed at 94,630 dollars, the initial twelve months at sixty-two thousand four hundred, and the final twelve months land at ninety-eight thousand.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 62400}, {"year": 2, "amount": 94630}, {"year": 3, "amount": 98000}]}
+  },
+  {
+    "id": "G-018",
+    "origin": "synthetic",
+    "text": "Graduated pricing over two periods: first period is forty-five thousand, second period is fifty-two thousand five hundred.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 45000}, {"year": 2, "amount": 52500}]}
+  },
+  {
+    "id": "G-019",
+    "origin": "synthetic",
+    "text": "Annual step-ups apply. 2027 invoices at $125,000; 2028 goes to $140,000; 2029 is $160,000.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 125000}, {"year": 2, "amount": 140000}, {"year": 3, "amount": 160000}]}
+  },
+  {
+    "id": "G-020",
+    "origin": "synthetic",
+    "text": "Pricing grows each contract period: the first is $8,500, the second is $12,750, and the third is $17,000.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 8500}, {"year": 2, "amount": 12750}, {"year": 3, "amount": 17000}]}
+  },
+  {
+    "id": "G-021",
+    "origin": "synthetic",
+    "text": "Tiered commitment — period one at 50k, period two at 62.5k, period three at 75k.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 50000}, {"year": 2, "amount": 62500}, {"year": 3, "amount": 75000}]}
+  },
+  {
+    "id": "G-022",
+    "origin": "synthetic",
+    "text": "Deal value increases annually: $200,000 then $230,000 then $265,000 over the three-period term.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 200000}, {"year": 2, "amount": 230000}, {"year": 3, "amount": 265000}]}
+  },
+  {
+    "id": "G-023",
+    "origin": "synthetic",
+    "text": "Multi-period deal with increasing annual value: first twelve months $33,000, next twelve months $41,250, last twelve months $49,500.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 33000}, {"year": 2, "amount": 41250}, {"year": 3, "amount": 49500}]}
+  },
+  {
+    "id": "G-024",
+    "origin": "synthetic",
+    "text": "Two-part pricing structure: 75,000 in the opening twelve months and 90,000 in the following twelve months.",
+    "expected": {"type": "ramp", "ramp": [{"year": 1, "amount": 75000}, {"year": 2, "amount": 90000}]}
+  },
+  {
+    "id": "G-025",
+    "origin": "negative",
+    "text": "Customer requested annual billing instead of monthly",
+    "expected": {"type": "none"}
+  },
+  {
+    "id": "G-026",
+    "origin": "negative",
+    "text": "Please send invoices to the London office",
+    "expected": {"type": "none"}
+  },
+  {
+    "id": "G-027",
+    "origin": "negative",
+    "text": "No special terms — standard contract",
+    "expected": {"type": "none"}
+  },
+  {
+    "id": "G-028",
+    "origin": "negative",
+    "text": "Multi-year commitment, auto-renews annually",
+    "expected": {"type": "none"}
+  },
+  {
+    "id": "G-029",
+    "origin": "negative",
+    "text": "Approved by VP Sales per policy exception",
+    "expected": {"type": "none"}
+  }
+]
