@@ -53,10 +53,6 @@ Closed Won deals flow straight to billing with no validation — contract-value 
 
 65 deals → 24 ready, 15 needs rep, 6 needs approval, 20 do-not-auto-invoice.
 
-### Mock Boundaries
-
-Stripe and Slack are stubbed: payloads and messages are written to disk, nothing is sent. The CSVs in `data/` stand in for the HubSpot API. Swapping in the real clients is a change at the send boundary only — replace `MockStripe` with the `stripe` SDK and outbox writes with a Slack webhook POST.
-
 ### Analysis and the LLM Parser
 
 `analysis/` contains the exploratory scripts behind the diagnosis (data profiling, reconciliation, discount analysis, duplicate detection, aging). The LLM parser is optional — everything runs without an API key.
@@ -90,12 +86,13 @@ This tool runs fully offline with mock integrations:
 
 | Real System | Mock |
 |-------------|------|
+| HubSpot API | CSVs in `data/` |
 | Stripe API | `MockStripe` → writes JSON to `out/stripe_requests/` |
 | Slack | Chase messages → `out/outbox/*.txt` |
 | State DB | `out/state.json` (content-hash idempotency) |
 | Audit log | `out/ledger.jsonl` (append-only) |
 
-**To go live:** swap `MockStripe` for the `stripe` SDK; replace outbox writes with a Slack webhook POST.
+**To go live:** swap `MockStripe` for the `stripe` SDK; replace outbox writes with a Slack webhook POST; point the loader at the HubSpot API.
 
 ## Repo Map
 
@@ -145,7 +142,12 @@ tests/
   test_triage.py        # Bucket precedence
   test_idempotent.py    # Idempotent re-run
   test_smoke.py         # Full-run bucket count assertion
-analysis/               # Placeholder for diagnosis scripts
+analysis/
+  01_profile.py         # Shape, dtypes, null counts, categorical value counts, special_terms notes
+  02_reconcile.py       # Contract value vs line-item sums; line math verification
+  03_discount.py        # Unweighted vs dollar-weighted discount; deals hiding >25% true discount
+  04_duplicates.py      # Fuzzy customer name pairs; deal fingerprint duplicates
+  05_aging.py           # Days-since-close distribution; stale deals and past-due term starts
 ```
 
 ## config.yaml
