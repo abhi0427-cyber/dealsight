@@ -18,7 +18,7 @@
 | G-007 | real | ramp | ramp | pass | ramp | pass | - |
 | G-008 | real | none | none | pass | none | pass | - |
 | G-009 | real | none | none | pass | none | pass | - |
-| G-010 | synthetic | coterm | none | FAIL | coterm | FAIL | - |
+| G-010 | synthetic | coterm | none | FAIL | none | FAIL | - |
 | G-011 | synthetic | coterm | none | FAIL | coterm | FAIL | - |
 | G-012 | synthetic | coterm | none | FAIL | coterm | FAIL | - |
 | G-013 | synthetic | coterm | none | FAIL | coterm | FAIL | - |

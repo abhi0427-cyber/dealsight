@@ -18,33 +18,26 @@ class LLMParser(BaseParser):
         model = self.config.get("parser", {}).get("llm_model", "claude-sonnet-4-6")
         temperature = self.config.get("parser", {}).get("llm_temperature", 0)
 
-        prompt = f"""Parse this deal special_terms field into structured JSON.
+        prompt = f"""Extract structured billing data from this special_terms note.
 
 Text: "{text}"
-
-Deal context:
-- deal_id: {deal.get('deal_id', '')}
-- contract_value_usd: {deal.get('contract_value_usd', '')}
-- term_months: {deal.get('term_months', '')}
-- term_start: {deal.get('term_start', '')}
 
 Return ONLY valid JSON with this schema:
 {{
   "type": "coterm" | "ramp" | "none",
   "sub_id": "SUB-XXXXX" or null,
   "coterm_end": "YYYY-MM-DD" or null,
-  "prorate": true/false or null,
+  "prorate": true | false | null,
   "ramp": [{{"year": 1, "amount": 12345.00}}, ...] or []
 }}
 
-Rules:
-- "coterm" if text mentions co-terminating with another subscription
-- "ramp" if text describes escalating payments across years
-- "none" if the text has no billing-relevant structure
-- Extract sub_id if a subscription ID (SUB-XXXXX) is mentioned
-- Extract coterm_end date if present
-- prorate is true if prorating is mentioned
-- For ramps, extract each year and its amount"""
+CRITICAL — extraction rules:
+- Populate a field ONLY when the text explicitly states it. Return null for any field the text does not address. Never infer a value from convention, common practice, or what would be typical.
+- "type": "coterm" if the text mentions co-terminating, co-term, or aligning end dates with another subscription. "ramp" if the text describes escalating or staged payments across years. "none" otherwise.
+- "sub_id": set only if the text contains a subscription ID matching SUB-XXXXX.
+- "coterm_end": set only if the text contains an explicit date.
+- "prorate": set to true ONLY if the text explicitly says to prorate, pro-rate, bill partially, or bill through a specific date. Set to false ONLY if the text explicitly says not to prorate or to bill in full. If the text does not mention prorating at all, return null.
+- "ramp": extract year/amount pairs only when the text states them."""
 
         body = json.dumps({
             "model": model,

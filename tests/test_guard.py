@@ -70,3 +70,12 @@ def test_guard_none_clean():
     deal = _deal(special_terms="Standard terms")
     result = reconcile(parsed, deal, pd.DataFrame())
     assert result["pass"] is True
+
+
+def test_guard_coterm_null_prorate_routes_to_human():
+    """Coterm parse with prorate=null should fail the guard (route to do_not_auto_invoice)."""
+    parsed = {"type": "coterm", "sub_id": "SUB-001", "coterm_end": "2026-01-01", "prorate": None}
+    deal = _deal(term_start=pd.Timestamp("2025-07-01"), contract_value_usd=50000)
+    result = reconcile(parsed, deal, pd.DataFrame())
+    assert result["pass"] is False
+    assert "prorate" in result["reason"]

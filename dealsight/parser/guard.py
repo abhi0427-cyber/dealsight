@@ -33,6 +33,17 @@ def reconcile(parsed: ParseResult, deal: pd.Series, lines: pd.DataFrame) -> dict
 
 
 def _check_coterm(parsed: ParseResult, deal: pd.Series, cv: float) -> dict:
+    # Null-field check: every field the payload builder needs must be present.
+    # A null in any required field means the LLM (or regex) couldn't confirm it
+    # from the source text — route to human review.
+    null_fields = [f for f in ("sub_id", "coterm_end", "prorate") if parsed.get(f) is None]
+    if null_fields:
+        return {
+            "pass": False,
+            "reason": f"Coterm parse has null required field(s): {', '.join(null_fields)}",
+            "details": parsed,
+        }
+
     coterm_end = parsed.get("coterm_end")
     if not coterm_end:
         return {"pass": False, "reason": "Coterm parsed but no end date extracted", "details": parsed}
