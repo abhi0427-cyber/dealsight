@@ -35,6 +35,32 @@ pip install -r requirements.txt
 python -m dealsight run
 ```
 
+## What This Does
+
+Closed Won deals flow straight to billing with no validation — contract-value mismatches, missing fields, and discount violations surface later as wrong or late invoices. DealSight runs 15 deterministic rules at the Closed Won gate and sorts every deal into one of four triage buckets (ready, needs rep, needs approval, do not auto-invoice). Each bucket triggers prepared work: Stripe payloads for ready deals, drafted rep messages for fixable gaps, and an upstream defect report for structural issues.
+
+## What You'll See
+
+| Output | Description |
+|--------|-------------|
+| `out/queue.html` | Ops interface with Queue, Ready, and Upstream tabs |
+| `out/stripe_requests/` | 24 Stripe invoice payloads (JSON, one per ready deal) |
+| `out/outbox/` | 15 drafted rep messages (one per needs-rep deal) |
+| `reports/eval_report.md` | Parser accuracy scores against the golden set |
+| `out/ledger.jsonl` | Append-only decision trail for every deal processed |
+
+### Results on the Provided Data
+
+65 deals → 24 ready, 15 needs rep, 6 needs approval, 20 do-not-auto-invoice.
+
+### Mock Boundaries
+
+Stripe and Slack are stubbed: payloads and messages are written to disk, nothing is sent. The CSVs in `data/` stand in for the HubSpot API. Swapping in the real clients is a change at the send boundary only — replace `MockStripe` with the `stripe` SDK and outbox writes with a Slack webhook POST.
+
+### Analysis and the LLM Parser
+
+`analysis/` contains the exploratory scripts behind the diagnosis (data profiling, reconciliation, discount analysis, duplicate detection, aging). The LLM parser is optional — everything runs without an API key.
+
 ## CLI Commands
 
 | Command | Description |
